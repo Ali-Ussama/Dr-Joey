@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/SingInActivityLayout"
+    android:background="@drawable/launch_splash"
+    tools:context=".Activities.SignUp_In.SignInActivity">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_joey"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <Button
+                        android:id="@+id/sign_in_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/btn_google_signin_dark_normal"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:fontFamily="@assets/fonts/Roboto-Medium"
+                        android:textStyle="bold"
+                        android:text="@string/common_signin_button_text_long" />
+
+
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/facebook_login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="3dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_marginTop="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center">
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textEmailAddress"
+                                    android:hint="@string/email"/>
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPassword"
+                                    android:layout_marginTop="5dp"
+                                    android:hint="@string/password"/>
+
+                                <Button
+                                    android:id="@+id/sign_in_joey"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginEnd="3dp"
+                                    android:background="@drawable/joey_sign_up_button"
+                                    android:textColor="@color/white"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="@assets/fonts/Roboto-Medium"
+                                    android:textStyle="bold"
+                                    android:text="@string/joey_sing_in_text" />
+
+                                <TextView
+                                    android:id="@+id/activity_sign_in_SignUpTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/logo_blue"
+                                    android:text="@string/don_t_have_account_yet_sign_up_now"/>
+                    </LinearLayout>
+                </LinearLayout>
+        </ScrollView>
+</LinearLayout>

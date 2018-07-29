@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.aliosama.sillynamemaker.Activities.Personality.PersonalityTestActivity$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/fragment_personality_test_Question_TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="You rarely get carried away by fantasies and ideas."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <RadioGroup
+            android:id="@+id/fragment_personality_test_Question_RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/test_personality_radio_button_agree"/>
+
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonMidAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_mid_agree"/>
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonLowAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_low_agree"/>
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonNatural"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_natural"/>
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonLowDisagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_low_disagree"/>
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonMidDisagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_mid_disagree"/>
+            <RadioButton
+                android:id="@+id/fragment_personality_test_Question_RadioButtonDisagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:button="@drawable/test_personality_radio_button_disagree"/>
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="110dp"
+                android:gravity="center"
+                android:text="@string/agree"
+                android:textColor="@color/radio_button_agree"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:textColor="@color/radio_button_disagree"
+                android:text="@string/disagree"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

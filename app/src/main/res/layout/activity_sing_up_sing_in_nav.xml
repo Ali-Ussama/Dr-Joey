@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:context="com.example.aliosama.sillynamemaker.Activities.SignUp_In.SignUpSignInNavActivity">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_joey"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/activity_sign_up_sign_in_sinupbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/joey_sign_up_button"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:fontFamily="@assets/fonts/Roboto-Medium"
+            android:textStyle="bold"
+            android:text="@string/sing_up"
+            android:onClick="SignUpSingInOnClick"/>
+
+        <Button
+            android:id="@+id/activity_sign_up_sign_in_loginbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/joey_sign_in_button"
+            android:textColor="@color/joey_signup_blue"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:fontFamily="@assets/fonts/Roboto-Medium"
+            android:textStyle="bold"
+            android:text="@string/joey_sing_in_text"
+            android:onClick="SignUpSingInOnClick"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="3dp"
+        android:gravity="bottom">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/joey_signup_blue"
+            android:text="@string/terms_privacy_policy1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/joey_signup_blue"
+            android:text="@string/terms_privacy_policy2"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

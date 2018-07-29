@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.aliosama.sillynamemaker.Fragments.ChatFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="16dp">
+        <Button
+            android:id="@+id/Joey_Chat_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chat With Dr Joey"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/joey_sign_up_button"/>
+
+        <Button
+            android:id="@+id/Anonymous_Chat_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Chat With Anonymous"
+            android:textAllCaps="false"
+            android:textColor="@color/joey_signup_blue"
+            android:background="@drawable/joey_sign_in_button"/>
+
+    </LinearLayout>
+
+</FrameLayout>

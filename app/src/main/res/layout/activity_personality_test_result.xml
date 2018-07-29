@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personality_test_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.aliosama.sillynamemaker.Activities.Personality.PersonalityTestResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_personality_type_is"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:id="@+id/activity_personality_test_result_Result_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                    <ImageView
+                        android:id="@+id/activity_personality_test_result_Result_ImageView"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/activity_personality_test_result_Result_Description_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Everyone is an artist, but not everyone knows it!"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_personality_test_result_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:id="@+id/activity_personality_test_result_Start_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="@string/Talk_to_Dr_Joey"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:background="@drawable/joey_sign_up_button"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

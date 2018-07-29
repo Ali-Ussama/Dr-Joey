@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202E5F</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#50a5e9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="logo_blue">#202E5F</color>
+    <color name="joey_signin_blue">#1f8ce3</color>
+    <color name="joey_signup_blue">#50a5e9</color>
+    <color name="radio_button_agree">#4C9070</color>
+    <color name="radio_button_natural">#ececeb</color>
+    <color name="radio_button_disagree">#94657E</color>
+    
+    <color name="personality_test_result_most_percentage">#51A9AB</color>
+    <color name="personality_test_result_less_percentage">#F5F5F5</color>
+
+</resources>
+
