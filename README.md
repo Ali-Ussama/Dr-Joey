@@ -22,7 +22,7 @@ To be friends with our users and help them through their problems. We suggested 
 
 
 ## Libraries and Tools
-- Firebase (Database - Cloud Functions - 
+- Firebase (Database - Cloud Functions - Storage)
 - Picasso
 - Navigation Drawer
 - Fragments and Activities
