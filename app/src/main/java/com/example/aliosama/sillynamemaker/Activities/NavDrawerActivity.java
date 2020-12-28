@@ -70,12 +70,15 @@ public class NavDrawerActivity extends AppCompatActivity
         switch (ItemSelected) {
             case 0:
                 fragment = new ChatFragment();
+                getSupportActionBar().setTitle(getString(R.string.home));
                 break;
             case 1:
                 fragment = new HistoryFragment();
+                getSupportActionBar().setTitle(getString(R.string.historu));
                 break;
             case 2:
                 fragment = new PersonalityTypesFragment();
+                getSupportActionBar().setTitle(getString(R.string.personality_types));
                 break;
         }
         return fragment;

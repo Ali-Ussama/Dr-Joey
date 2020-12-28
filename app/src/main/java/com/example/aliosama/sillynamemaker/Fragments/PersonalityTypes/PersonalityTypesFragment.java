@@ -38,7 +38,6 @@ public class PersonalityTypesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_personality_types, container, false);
         try {
-
             mAvLoadingIndicatorView = view.findViewById(R.id.fragment_personality_types_avi);
             Recyclerdata = new ArrayList<>();
             mPersonalityTypesRecAdapter = new PersonalityTypesRecAdapter(Recyclerdata);

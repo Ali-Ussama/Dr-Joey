@@ -6,17 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-import com.example.aliosama.sillynamemaker.Activities.Chatbot.ChatActivity;
 import com.example.aliosama.sillynamemaker.Activities.Chatbot.FirebaseChatbotActivity;
 import com.example.aliosama.sillynamemaker.R;
 import com.example.aliosama.sillynamemaker.databinding.FragmentChatBinding;
-import com.google.android.material.button.MaterialButton;
 
 public class ChatFragment extends Fragment {
 

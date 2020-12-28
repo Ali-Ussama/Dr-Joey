@@ -7,6 +7,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +16,7 @@ import com.ethanhua.skeleton.SkeletonScreen;
 import com.example.aliosama.sillynamemaker.Model.POJO.PersonalityTypesModel;
 import com.example.aliosama.sillynamemaker.Model.PersonalityTypesDatabase;
 import com.example.aliosama.sillynamemaker.R;
+import com.example.aliosama.sillynamemaker.databinding.ActivityPersonalityTypeItemBinding;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -29,15 +31,18 @@ public class PersonalityTypeItemActivity extends AppCompatActivity {
     PersonalityTypesDatabase mPersonalityTypesDatabase;
     ScrollView SkeletonRootView;
     SkeletonScreen mSkeletonScreen;
+    private ActivityPersonalityTypeItemBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personality_type_item);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_personality_type_item);
         try {
+            setSupportActionBar(binding.toolbar);
             Intent intent = getIntent();
             mPersonalityTypesModel = (PersonalityTypesModel) intent.getSerializableExtra("PersonalityTypeRowItemData");
             Init();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -64,12 +69,12 @@ public class PersonalityTypeItemActivity extends AppCompatActivity {
 
             mPersonalityTypesDatabase = new PersonalityTypesDatabase(PersonalityTypeItemActivity.this);
             mPersonalityTypesDatabase.getPersonalityTypeItemData(mPersonalityTypesModel);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void NotifyAdapter(PersonalityTypesModel mPersonalityTypesModel){
+    public void NotifyAdapter(PersonalityTypesModel mPersonalityTypesModel) {
         try {
             this.mPersonalityTypesModel = mPersonalityTypesModel;
             Header1.setText(mPersonalityTypesModel.getmFullDescriptions().get(3).getHeader());
@@ -82,12 +87,18 @@ public class PersonalityTypeItemActivity extends AppCompatActivity {
 
             String CharacterTitle = mPersonalityTypesModel.getCharacterTitle().toLowerCase();
             // Change the first letter to upper case and the rest of the word to lowercase + You May Know
-            CharacterTitle = CharacterTitle.substring(0,1).toUpperCase().concat(CharacterTitle.substring(1,CharacterTitle.length()).toLowerCase()).concat("s You May Know");
+            CharacterTitle = CharacterTitle.substring(0, 1).toUpperCase().concat(CharacterTitle.substring(1, CharacterTitle.length()).toLowerCase()).concat("s You May Know");
             YouMayKnowTextView.setText(CharacterTitle);
             mSkeletonScreen.hide();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }
