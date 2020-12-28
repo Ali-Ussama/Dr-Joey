@@ -35,7 +35,6 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textAllCaps="false"
-            android:fontFamily="@assets/fonts/Roboto-Medium"
             android:textStyle="bold"
             android:text="@string/sing_up"
             android:onClick="SignUpSingInOnClick"/>
@@ -51,7 +50,6 @@
             android:textColor="@color/joey_signup_blue"
             android:textSize="17sp"
             android:textAllCaps="false"
-            android:fontFamily="@assets/fonts/Roboto-Medium"
             android:textStyle="bold"
             android:text="@string/joey_sing_in_text"
             android:onClick="SignUpSingInOnClick"/>

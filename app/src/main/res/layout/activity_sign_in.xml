@@ -1,95 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/SingInActivityLayout"
-    android:background="@drawable/launch_splash"
-    tools:context=".Activities.SignUp_In.SignInActivity">
-        <ScrollView
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/SingInActivityLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-                <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            tools:context=".Activities.SignUp_In.SignInActivity">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/app_ic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="?actionBarSize"
+                android:src="@drawable/ic_joey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_google_signin_dark_normal"
+                android:text="@string/common_signin_button_text_long"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".3" />
+
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sign_in_button" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facebook_login_button" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/email_et"
+                app:layout_constraintStart_toStartOf="@+id/email_et"
+                app:layout_constraintTop_toBottomOf="@+id/email_et"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_margin="20dp">
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:src="@drawable/ic_joey"
-                        android:layout_gravity="center_horizontal"/>
-
-                    <Button
-                        android:id="@+id/sign_in_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/btn_google_signin_dark_normal"
-                        android:textColor="@color/white"
-                        android:textAllCaps="false"
-                        android:fontFamily="@assets/fonts/Roboto-Medium"
-                        android:textStyle="bold"
-                        android:text="@string/common_signin_button_text_long" />
+                    android:cursorVisible="true"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
+            <Button
+                android:id="@+id/sign_in_joey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/joey_sign_up_button"
+                android:text="@string/joey_sing_in_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/password_input_layout"
+                app:layout_constraintStart_toStartOf="@+id/password_input_layout"
+                app:layout_constraintTop_toBottomOf="@+id/password_input_layout" />
 
-                    <com.facebook.login.widget.LoginButton
-                        android:id="@+id/facebook_login_button"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginEnd="3dp"
-                        android:paddingTop="12dp"
-                        android:paddingBottom="12dp"
-                        android:layout_marginTop="10dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_marginTop="30dp"
-                        android:layout_gravity="center">
-                                <EditText
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="textEmailAddress"
-                                    android:hint="@string/email"/>
-
-                                <EditText
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="textPassword"
-                                    android:layout_marginTop="5dp"
-                                    android:hint="@string/password"/>
-
-                                <Button
-                                    android:id="@+id/sign_in_joey"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginStart="4dp"
-                                    android:layout_marginEnd="3dp"
-                                    android:background="@drawable/joey_sign_up_button"
-                                    android:textColor="@color/white"
-                                    android:textAllCaps="false"
-                                    android:fontFamily="@assets/fonts/Roboto-Medium"
-                                    android:textStyle="bold"
-                                    android:text="@string/joey_sing_in_text" />
-
-                                <TextView
-                                    android:id="@+id/activity_sign_in_SignUpTextView"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:gravity="center"
-                                    android:textSize="15sp"
-                                    android:textColor="@color/logo_blue"
-                                    android:text="@string/don_t_have_account_yet_sign_up_now"/>
-                    </LinearLayout>
-                </LinearLayout>
-        </ScrollView>
-</LinearLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/activity_sign_in_SignUpTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/don_t_have_account_yet_sign_up_now"
+                android:textColor="@color/logo_blue"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/sign_in_joey"
+                app:layout_constraintStart_toStartOf="@+id/sign_in_joey"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_joey" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

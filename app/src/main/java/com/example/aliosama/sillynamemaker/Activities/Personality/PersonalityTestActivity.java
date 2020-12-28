@@ -1,35 +1,31 @@
 package com.example.aliosama.sillynamemaker.Activities.Personality;
 
 import android.content.Intent;
-import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.daimajia.numberprogressbar.NumberProgressBar;
-import com.example.aliosama.sillynamemaker.Activities.NavDrawerActivity;
 import com.example.aliosama.sillynamemaker.Model.POJO.PersonalityQuestionsModel;
 import com.example.aliosama.sillynamemaker.Model.PersonalityQuestionsDatabase;
 import com.example.aliosama.sillynamemaker.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.wang.avi.AVLoadingIndicatorView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,14 +34,7 @@ import uk.co.deanwild.materialshowcaseview.ShowcaseConfig;
 
 public class PersonalityTestActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener , View.OnClickListener{
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
+
     static FloatingActionButton fab_next, fab_before;
     private  SectionsPagerAdapter mSectionsPagerAdapter;
     private  AVLoadingIndicatorView avi;
@@ -373,10 +362,6 @@ public class PersonalityTestActivity extends AppCompatActivity implements ViewPa
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public static class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         static List<PersonalityQuestionsModel.Fields.Question> Questions;

@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "839946608144",
+    "firebase_url": "https://sillynamemaker-78d9a.firebaseio.com",
+    "project_id": "sillynamemaker-78d9a",
+    "storage_bucket": "sillynamemaker-78d9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839946608144:android:3203f8124a33dd3a",
+        "android_client_info": {
+          "package_name": "com.aliussama.hello_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839946608144-p1ft5posckhko74al65avdrvd3rl6n08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aliussama.hello_app",
+            "certificate_hash": "3675ac8f64b18d04543d9e9fac5b1711a4ce1fa1"
+          }
+        },
+        {
+          "client_id": "839946608144-qm9jg3754hlhk09aghdspsmr9gsh11gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aliussama.hello_app",
+            "certificate_hash": "6da74b1a273138d6fb940d286442bc12cd5a8945"
+          }
+        },
+        {
+          "client_id": "839946608144-3oe8icp6ms95sjtc097n60k7g6imih4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSGTq79kWG8elEfVrl_iTzz6781Eplv-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839946608144-2m6uucshmv5pkodhaooqo01gect69e01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839946608144:android:785237274760680e",
+        "android_client_info": {
+          "package_name": "com.example.aliosama.sillynamemaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839946608144-4fhh21qr12l62ljdg0e61urni0vef9te.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aliosama.sillynamemaker",
+            "certificate_hash": "3675ac8f64b18d04543d9e9fac5b1711a4ce1fa1"
+          }
+        },
+        {
+          "client_id": "839946608144-kb0cur2foon9o1aku0dvqb79tjj0q357.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aliosama.sillynamemaker",
+            "certificate_hash": "6da74b1a273138d6fb940d286442bc12cd5a8945"
+          }
+        },
+        {
+          "client_id": "839946608144-3oe8icp6ms95sjtc097n60k7g6imih4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSGTq79kWG8elEfVrl_iTzz6781Eplv-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839946608144-2m6uucshmv5pkodhaooqo01gect69e01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

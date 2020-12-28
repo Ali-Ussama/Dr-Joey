@@ -5,10 +5,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -41,6 +38,10 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
 import android.content.Intent;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Locale;
 
@@ -92,6 +93,7 @@ public class FirebaseChatbotActivity extends AppCompatActivity implements AIList
             final AIConfiguration config = new AIConfiguration(getResources().getString(R.string.DIALOGFLOW_CLIENT_ACCESS_TOKEN),
                     AIConfiguration.SupportedLanguages.English,
                     AIConfiguration.RecognitionEngine.System);
+
 
             aiService = AIService.getService(this, config);
             aiService.setListener(this);
@@ -312,18 +314,18 @@ public class FirebaseChatbotActivity extends AppCompatActivity implements AIList
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        try{
+        super.onActivityResult(requestCode, resultCode, data);
+        try {
             if (requestCode == MY_DATA_CHECK_CODE) {
                 if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
                     myTTS = new TextToSpeech(this, this);
-                }
-                else {
+                } else {
                     Intent installTTSIntent = new Intent();
                     installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
                     startActivity(installTTSIntent);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

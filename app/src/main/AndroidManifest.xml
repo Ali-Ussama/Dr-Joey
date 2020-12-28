@@ -13,9 +13,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_joey_white_background"
+        android:icon="@mipmap/ic_joey"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_joey_white_background"
+        android:roundIcon="@mipmap/ic_joey"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

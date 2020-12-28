@@ -16,7 +16,7 @@
         android:text="@string/listen_btn"
         android:onClick="listenButtonOnClick"/>
 
-    <android.support.design.internal.BaselineLayout
+    <com.google.android.material.internal.BaselineLayout
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:layout_marginTop="10dp"

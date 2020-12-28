@@ -28,7 +28,7 @@
             android:layout_gravity="top"
             />
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -44,14 +44,15 @@
             android:layout_margin="16dp"
             android:gravity="center">
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_before"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/baseline_navigate_before_white_24"
-                android:visibility="invisible" />
+                android:visibility="invisible"
+                android:contentDescription="@string/app_name" />
 
             <Button
                 android:id="@+id/activity_personality_test_submit_Button"
@@ -68,7 +69,7 @@
                 android:textStyle="bold"
                 android:visibility="invisible" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

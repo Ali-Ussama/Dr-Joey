@@ -1,35 +1,54 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context="com.example.aliosama.sillynamemaker.Fragments.ChatFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_margin="16dp">
+        android:background="@color/white"
+        tools:context="com.example.aliosama.sillynamemaker.Fragments.ChatFragment">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_joey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintWidth_percent="0.3"/>
+
         <Button
             android:id="@+id/Joey_Chat_Button"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/joey_sign_up_button"
             android:text="Chat With Dr Joey"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:background="@drawable/joey_sign_up_button"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
 
         <Button
             android:id="@+id/Anonymous_Chat_Button"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:background="@drawable/joey_sign_in_button"
             android:text="Chat With Anonymous"
             android:textAllCaps="false"
             android:textColor="@color/joey_signup_blue"
-            android:background="@drawable/joey_sign_in_button"/>
+            app:layout_constraintEnd_toEndOf="@+id/Joey_Chat_Button"
+            app:layout_constraintStart_toStartOf="@+id/Joey_Chat_Button"
+            app:layout_constraintTop_toBottomOf="@+id/Joey_Chat_Button" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</layout>

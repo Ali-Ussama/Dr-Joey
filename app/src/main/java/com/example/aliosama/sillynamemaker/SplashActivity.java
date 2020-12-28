@@ -3,11 +3,11 @@ package com.example.aliosama.sillynamemaker;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.aliosama.sillynamemaker.Activities.SignUp_In.SignInActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.aliosama.sillynamemaker.Activities.SignUp_In.SignUpSignInNavActivity;
 
 public class SplashActivity extends AppCompatActivity {

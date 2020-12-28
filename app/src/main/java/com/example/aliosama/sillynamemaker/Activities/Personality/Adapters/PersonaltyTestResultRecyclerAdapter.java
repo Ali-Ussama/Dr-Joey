@@ -1,12 +1,13 @@
 package com.example.aliosama.sillynamemaker.Activities.Personality.Adapters;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aliosama.sillynamemaker.Model.POJO.PersonalityTestResultModel;
 import com.example.aliosama.sillynamemaker.R;

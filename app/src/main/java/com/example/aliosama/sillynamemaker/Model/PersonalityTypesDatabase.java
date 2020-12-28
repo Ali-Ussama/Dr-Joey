@@ -1,7 +1,8 @@
 package com.example.aliosama.sillynamemaker.Model;
 
-import android.support.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.example.aliosama.sillynamemaker.Activities.PersonalityType.PersonalityTypeItemActivity;
 import com.example.aliosama.sillynamemaker.Fragments.PersonalityTypes.PersonalityTypesFragment;

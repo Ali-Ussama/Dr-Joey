@@ -2,31 +2,33 @@ package com.example.aliosama.sillynamemaker.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.util.Log;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.aliosama.sillynamemaker.Activities.SignUp_In.SignUpSignInNavActivity;
 import com.example.aliosama.sillynamemaker.Fragments.ChatFragment;
 import com.example.aliosama.sillynamemaker.Fragments.History.HistoryFragment;
 import com.example.aliosama.sillynamemaker.Fragments.PersonalityTypes.PersonalityTypesFragment;
 import com.example.aliosama.sillynamemaker.R;
+import com.example.aliosama.sillynamemaker.databinding.ActivityNavDrawerBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -34,36 +36,38 @@ public class NavDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     int ItemSelected = 0;
-    NavigationView navigationView;
+
+    ActivityNavDrawerBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nav_drawer);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_nav_drawer);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        setMenuCounter(R.id.nav_chat,4);
+        binding.navView.setNavigationItemSelectedListener(this);
 
+        binding.navView.setCheckedItem(R.id.nav_chat);
+        setMenuCounter(R.id.nav_chat, 4);
+        loadFragment();
     }
 
     private void setMenuCounter(@IdRes int itemId, int count) {
-        TextView view = (TextView) navigationView.getMenu().findItem(itemId).getActionView();
+        TextView view = (TextView) binding.navView.getMenu().findItem(itemId).getActionView();
         view.setText(count > 0 ? String.valueOf(count) : null);
     }
 
-    private Fragment getFragment(){
+    private Fragment getFragment() {
         Fragment fragment = null;
-        switch (ItemSelected){
+        switch (ItemSelected) {
             case 0:
                 fragment = new ChatFragment();
                 break;
@@ -77,18 +81,18 @@ public class NavDrawerActivity extends AppCompatActivity
         return fragment;
     }
 
-    private void loadFragment(){
+    private void loadFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.nav_content,getFragment())
+                .replace(R.id.nav_content, getFragment())
                 .commit();
     }
 
-    private void getActivity(){
+    private void getActivity() {
 
     }
 
-    private void loadActivity(){
+    private void loadActivity() {
 
     }
 
@@ -155,9 +159,9 @@ public class NavDrawerActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
             item.setChecked(true);
 
-        }else if (id == R.id.nav_contactUs) {
+        } else if (id == R.id.nav_contactUs) {
 
-        }else  if (id == R.id.nav_SignOut){
+        } else if (id == R.id.nav_SignOut) {
             if (ItemSelected != 6) {
                 ItemSelected = 6;
                 item.setChecked(true);
@@ -165,12 +169,12 @@ public class NavDrawerActivity extends AppCompatActivity
             }
         }
 
-        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    private void FirebasesingOut(){
+    private void FirebasesingOut() {
         try {
             FirebaseAuth mAuth = FirebaseAuth.getInstance();
             FirebaseUser user = mAuth.getCurrentUser();
@@ -184,20 +188,20 @@ public class NavDrawerActivity extends AppCompatActivity
                         .build();
 
 
-                GoogleSignInClient mGoogleSignInClient =  GoogleSignIn.getClient(this,gso);
+                GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
                 mGoogleSignInClient.signOut()
                         .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 
-                                if (task.isComplete() && task.isSuccessful()){
-                                    Log.i("Nav Sign Out","Google Sign out complete Successfully");
+                                if (task.isComplete() && task.isSuccessful()) {
+                                    Log.i("Nav Sign Out", "Google Sign out complete Successfully");
                                 }
                             }
                         });
                 startActivity(new Intent(NavDrawerActivity.this, SignUpSignInNavActivity.class));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
