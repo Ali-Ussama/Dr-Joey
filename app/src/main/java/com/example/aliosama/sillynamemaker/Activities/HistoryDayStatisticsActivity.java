@@ -81,18 +81,24 @@ public class HistoryDayStatisticsActivity extends AppCompatActivity {
             pieChart.setDragDecelerationFrictionCoef(0.99f);
             pieChart.setTransparentCircleRadius(55f);
             pieChart.setDrawHoleEnabled(true);
-            pieChart.getDescription().setEnabled(false);
-            Description description = new Description();
-            description.setText(Day);
-            description.setTextSize(25f);
-            description.setPosition(400,500);
-            description.setTextColor(Color.BLACK);
-            pieChart.setDescription(description);
+//            pieChart.getDescription().setEnabled(false);
+//            Description description = new Description();
+//            description.setText(Day);
+//            description.setTextSize(25f);
+//            description.setPosition(400,500);
+//            description.setTextColor(Color.BLACK);
+//            pieChart.setDescription(description);
             pieChart.animateY(1000, Easing.EasingOption.EaseInOutCirc);
             pieChart.invalidate();
         }catch (Exception e){
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }
